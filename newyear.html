@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #0a0a2e 0%, #16213e 50%, #1a1a3e 100%);
+            position: relative;
+            height: 100vh;
+        }
+
+        .palm-trees {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%231a1a3e;stop-opacity:0" /><stop offset="100%" style="stop-color:%230d0d1e;stop-opacity:1" /></linearGradient></defs><rect fill="url(%23skyGrad)" width="1200" height="400"/><ellipse cx="100" cy="380" rx="80" ry="20" fill="%23050510" opacity="0.5"/><ellipse cx="300" cy="380" rx="80" ry="20" fill="%23050510" opacity="0.5"/><ellipse cx="900" cy="380" rx="80" ry="20" fill="%23050510" opacity="0.5"/><ellipse cx="1100" cy="380" rx="80" ry="20" fill="%23050510" opacity="0.5"/><rect x="95" y="200" width="10" height="180" fill="%23654321"/><path d="M 100 200 Q 60 180 50 160 Q 55 165 60 180 Q 70 190 100 200" fill="%23228B22"/><path d="M 100 200 Q 140 180 150 160 Q 145 165 140 180 Q 130 190 100 200" fill="%23228B22"/><path d="M 100 200 Q 80 160 70 140 Q 75 150 85 170 Q 92 185 100 200" fill="%232E7D32"/><path d="M 100 200 Q 120 160 130 140 Q 125 150 115 170 Q 108 185 100 200" fill="%232E7D32"/><path d="M 100 200 Q 90 170 85 150 Q 88 160 95 180 Q 98 190 100 200" fill="%231B5E20"/><path d="M 100 200 Q 110 170 115 150 Q 112 160 105 180 Q 102 190 100 200" fill="%231B5E20"/><rect x="295" y="180" width="10" height="200" fill="%23654321"/><path d="M 300 180 Q 260 160 250 135 Q 255 142 265 160 Q 280 170 300 180" fill="%23228B22"/><path d="M 300 180 Q 340 160 350 135 Q 345 142 335 160 Q 320 170 300 180" fill="%23228B22"/><path d="M 300 180 Q 275 145 265 120 Q 272 132 285 155 Q 293 168 300 180" fill="%232E7D32"/><path d="M 300 180 Q 325 145 335 120 Q 328 132 315 155 Q 307 168 300 180" fill="%232E7D32"/><path d="M 300 180 Q 285 155 280 135 Q 285 145 293 165 Q 297 173 300 180" fill="%231B5E20"/><path d="M 300 180 Q 315 155 320 135 Q 315 145 307 165 Q 303 173 300 180" fill="%231B5E20"/><rect x="895" y="220" width="10" height="160" fill="%23654321"/><path d="M 900 220 Q 865 205 855 185 Q 860 190 870 205 Q 885 215 900 220" fill="%23228B22"/><path d="M 900 220 Q 935 205 945 185 Q 940 190 930 205 Q 915 215 900 220" fill="%23228B22"/><path d="M 900 220 Q 880 190 870 170 Q 875 180 887 200 Q 894 210 900 220" fill="%232E7D32"/><path d="M 900 220 Q 920 190 930 170 Q 925 180 913 200 Q 906 210 900 220" fill="%232E7D32"/><rect x="1095" y="240" width="10" height="140" fill="%23654321"/><path d="M 1100 240 Q 1070 225 1060 210 Q 1065 215 1075 228 Q 1088 235 1100 240" fill="%23228B22"/><path d="M 1100 240 Q 1130 225 1140 210 Q 1135 215 1125 228 Q 1112 235 1100 240" fill="%23228B22"/><path d="M 1100 240 Q 1085 215 1078 200 Q 1082 207 1092 225 Q 1097 233 1100 240" fill="%232E7D32"/><path d="M 1100 240 Q 1115 215 1122 200 Q 1118 207 1108 225 Q 1103 233 1100 240" fill="%232E7D32"/></svg>') no-repeat center bottom;
+            background-size: cover;
+            z-index: 1;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        .main-text {
+            font-size: 72px;
+            font-weight: bold;
+            margin: 80px 0 20px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8),
+                         0 0 40px rgba(255, 215, 0, 0.6);
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .year {
+            font-size: 96px;
+            font-weight: bold;
+            margin: 20px 0;
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .message {
+            font-size: 24px;
+            max-width: 800px;
+            margin: 40px auto;
+            line-height: 1.8;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 3s ease-in;
+        }
+
+        .author {
+            font-size: 20px;
+            font-style: italic;
+            margin-top: 30px;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 20px rgba(255, 215, 0, 0.8),
+                           0 0 40px rgba(255, 215, 0, 0.6);
+            }
+            50% {
+                text-shadow: 0 0 30px rgba(255, 215, 0, 1),
+                           0 0 60px rgba(255, 215, 0, 0.8);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .main-text { font-size: 48px; }
+            .year { font-size: 64px; }
+            .message { font-size: 18px; padding: 0 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="palm-trees"></div>
+    <canvas id="fireworks"></canvas>
+    
+    <div class="content">
+        <div class="main-text">HAPPY NEW YEAR</div>
+        <div class="year">2026</div>
+        <div class="message">
+            As we welcome this brand new year, may it bring abundant joy, prosperity, and countless blessings to you and your loved ones. May every dream you chase turn into reality, and may each day be filled with happiness, good health, and wonderful memories. Here's to new beginnings, exciting adventures, and cherished moments with family and friends. Wishing you all a spectacular year ahead!
+        </div>
+        <div class="author">— Ololade Olaide</div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('fireworks');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        class Particle {
+            constructor(x, y, color) {
+                this.x = x;
+                this.y = y;
+                this.color = color;
+                this.velocity = {
+                    x: (Math.random() - 0.5) * 8,
+                    y: (Math.random() - 0.5) * 8
+                };
+                this.alpha = 1;
+                this.decay = Math.random() * 0.02 + 0.01;
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, 3, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                ctx.restore();
+            }
+
+            update() {
+                this.velocity.y += 0.1;
+                this.x += this.velocity.x;
+                this.y += this.velocity.y;
+                this.alpha -= this.decay;
+            }
+        }
+
+        class Firework {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.particles = [];
+                const colors = ['#ffd700', '#ff6b6b', '#4ecdc4', '#45b7d1', '#f9ca24', '#ff9ff3'];
+                const particleCount = 50;
+                
+                for (let i = 0; i < particleCount; i++) {
+                    this.particles.push(new Particle(x, y, colors[Math.floor(Math.random() * colors.length)]));
+                }
+            }
+
+            update() {
+                this.particles.forEach((particle, index) => {
+                    particle.update();
+                    if (particle.alpha <= 0) {
+                        this.particles.splice(index, 1);
+                    }
+                });
+            }
+
+            draw() {
+                this.particles.forEach(particle => particle.draw());
+            }
+        }
+
+        let fireworks = [];
+
+        function animate() {
+            ctx.fillStyle = 'rgba(10, 10, 46, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            fireworks.forEach((firework, index) => {
+                firework.update();
+                firework.draw();
+                if (firework.particles.length === 0) {
+                    fireworks.splice(index, 1);
+                }
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        function launchFirework() {
+            const x = Math.random() * canvas.width;
+            const y = Math.random() * canvas.height * 0.5;
+            fireworks.push(new Firework(x, y));
+        }
+
+        setInterval(launchFirework, 400);
+        animate();
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        canvas.addEventListener('click', (e) => {
+            fireworks.push(new Firework(e.clientX, e.clientY));
+        });
+    </script>
+</body>
+</html>
